@@ -5,6 +5,7 @@ const Menu = styled.div`
   background-color: #9c9c9c16;
   display: flex;
   width: 100vw;
+  z-index: 9999;
 
   justify-content: space-between;
   padding: 10px;

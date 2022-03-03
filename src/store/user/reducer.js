@@ -2,7 +2,9 @@ import axios from "axios";
 
 const initialState = {
   USER: [],
-  FILMS:[]
+  FILMS:[],
+  CHARACTERS:[],
+  USERLIST:[]
 };
 
 const reducer = (state = initialState, action) => {
@@ -14,14 +16,25 @@ const reducer = (state = initialState, action) => {
         USER: action.payload,
       };
 
-      
-      case "GET_FILMS":
-          return {
-              ...state,
-              FILMS: action.payload,
-            };
-            
-      default:
+    case "GET_USERLIST":
+      return {
+        ...state,
+        USERLIST: action.payload,
+      };
+
+    case "GET_FILMS":
+      return {
+        ...state,
+        FILMS: action.payload,
+      };
+
+    case "GET_CHARACTERS":
+      return {
+        ...state,
+        CHARACTERS: action.payload,
+      };
+
+    default:
       return state;
   }
 };

@@ -54,6 +54,18 @@ export const Login = styled.div`
       flex-direction: column;
       gap: 10px;
 
+      .form-select {
+        font-family: OCRS;
+        border-radius: 0;
+        background-color: #b8b8b828;
+        border: 0;
+        color: #9c9c9c;
+        font-weight: 600;
+        :focus{
+          outline:none;
+        }
+      }
+
       input {
         font-family: OCRS;
         color: white;
