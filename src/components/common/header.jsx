@@ -4,7 +4,7 @@ import Burguer from "../../assets/images/burger.png";
 import Logo from "../../assets/images/logo.png";
 import styled from 'styled-components';
 
-import { useNavigate } from "react-router-dom";
+
 const Burguertab = styled.div`
   margin-right: 30px;
   position: relative;
@@ -54,7 +54,7 @@ const Burguertab = styled.div`
 export default function Header() {
    
   const [toggle,setToggle] =useState(false);
-  let navigate =useNavigate()
+
  
 
   return (
@@ -77,7 +77,8 @@ export default function Header() {
                 window.localStorage.removeItem('token')
                 window.localStorage.removeItem("USER");
 
-                navigate('/')
+              
+                window.location.href = "/";
               }} >cerrar</span>
             </li>
           </div>

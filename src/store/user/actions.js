@@ -1,12 +1,16 @@
 import axios from "axios";
 
-const getUser = (id) => {
+const getUser = () => {
+
+  let USER = window.localStorage.getItem('USER')
+  
   return async (dispatch) => {
-    const req = await axios.get("https://swapi.dev/api/people");
-    let user = req.data.results[id || 0];
+    const req = await axios.get(`https://swapi.dev/api/people/${USER}`);
+    //let user = req.data.results;
+     console.log("USER EN ACTION", req.data);
     dispatch({
       type: "GET_USER",
-      payload:user
+      payload:req.data
     });
   };
 };

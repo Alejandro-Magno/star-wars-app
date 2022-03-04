@@ -19,11 +19,11 @@ function VistaView({ getUser, USER, FILMS, getMovies }) {
 
   const [mov, setMov] = useState();
   const navigate = useNavigate();
-  const USERLOCAL = parseInt(window.localStorage.getItem("USER"));
 
+  console.log()
   useEffect(() => {
     if (USER == false) {
-      getUser(USERLOCAL);
+      getUser();
     } else {
       getMovies(USER);
     }
@@ -169,21 +169,23 @@ function VistaView({ getUser, USER, FILMS, getMovies }) {
 
   return (
     <>
-      <Header />
-      <ListaView>
-        <div className="container">
-          <div className="Header">
-            <div>
-              <h2>User: {USER.name}</h2>
-            </div>
-          </div>
-
-          <div className="Movie--container">
-            <MultiRender repeticiones={FILMS.length} Component={Movies} />
+       <Header /> 
+    <ListaView>
+      <div className="container">
+        <div className="Header">
+          <div
+         
+          >
+            <h2>User: {USER.name}</h2>
           </div>
         </div>
-      </ListaView>
-    </>
+
+        <div className="Movie--container">
+          <MultiRender repeticiones={FILMS.length} Component={Movies} />
+        </div>
+      </div>
+    </ListaView>
+      </>
   );
 }
 
