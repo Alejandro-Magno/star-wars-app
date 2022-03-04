@@ -20,7 +20,7 @@ function VistaView({ getUser, USER, FILMS, getMovies }) {
   const [mov, setMov] = useState();
   const navigate = useNavigate();
 
-  console.log()
+  console.log(FILMS)
   useEffect(() => {
     if (USER == false) {
       getUser();

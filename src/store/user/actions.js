@@ -7,7 +7,7 @@ const getUser = () => {
   return async (dispatch) => {
     const req = await axios.get(`https://swapi.dev/api/people/${USER}`);
     //let user = req.data.results;
-     console.log("USER EN ACTION", req.data);
+     //console.log("USER EN ACTION", req.data);
     dispatch({
       type: "GET_USER",
       payload:req.data
